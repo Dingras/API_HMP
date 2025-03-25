@@ -32,7 +32,7 @@ def Register(request):
         user.set_password(user_serializer.data['password'])
         user.save()
 
-        token = Token.objects.create(user=user)
+        token, created = Token.objects.get_or_create(user=user)
 
         return Response({'token': token.key, 'user': user_serializer.data},status = status.HTTP_201_CREATED)
 
