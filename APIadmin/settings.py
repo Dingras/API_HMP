@@ -129,13 +129,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS = [ # Orígenes permitidos
-    "http://localhost:5173",
-    "https://www.hidraulicamp.com.ar",
-    "https://www.admin.hidraulicamp.com.ar",
-]
+# CORS_ALLOWED_ORIGINS = [ # Orígenes permitidos
+#     "http://localhost:5173",
+#     "https://www.hidraulicamp.com.ar",
+#     "https://www.admin.hidraulicamp.com.ar",
+# ]
 
-# CORS_ALLOW_ALL_ORIGINS = True  # No recomendado en producción (permite todos los orígenes)
+CORS_ALLOW_ALL_ORIGINS = True  # No recomendado en producción (permite todos los orígenes)
 
 CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"] # Métodos permitidos
 
