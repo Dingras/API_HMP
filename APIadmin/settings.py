@@ -137,13 +137,16 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# CORS_ALLOWED_ORIGINS = [ # Orígenes permitidos
-#     "http://localhost:5173",
-#     "https://www.hidraulicamp.com.ar",
-#     "https://www.admin.hidraulicamp.com.ar",
-# ]
+CORS_ALLOWED_ORIGINS = [ # Orígenes permitidos
+    "http://localhost:5173",
+    "http://localhost:5174/",
+    "http://localhost:5175/",
+    "https://www.hidraulicamp.com.ar",
+    "https://www.admin.hidraulicamp.com.ar",
+    "https://hidraulicamp-v2.vercel.app/",
+]
 
-CORS_ALLOW_ALL_ORIGINS = True  # No recomendado en producción (permite todos los orígenes)
+# CORS_ALLOW_ALL_ORIGINS = True  # No recomendado en producción (permite todos los orígenes)
 
 CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"] # Métodos permitidos
 
