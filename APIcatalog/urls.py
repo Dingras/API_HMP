@@ -21,6 +21,7 @@ urlpatterns = [
     # Product Routes
     path('products/', views.GetProducts),
     path('product/<int:product_id>/', views.GetProduct),
+    path('products/category/<int:category_id>/', views.GetProductByCategoryID),
     path('product/new/', views.CreateProduct),
     path('product/delete/<int:product_id>/', views.DeleteProduct),
 

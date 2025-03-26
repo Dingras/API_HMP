@@ -173,6 +173,12 @@ def GetProduct(request, product_id):
     product_serializer = ProductSerializer(product)
     return Response({'product': product_serializer.data}, status=status.HTTP_200_OK)
 
+@api_view(['GET'])
+def GetProductsByCategoryID(request, category_id):
+    products = Product.objects.filter(category_id=category_id)
+    product_serializer = ProductSerializer(products, many=True)
+    return Response({'products': product_serializer.data}, status=status.HTTP_200_OK)
+
 @api_view(['POST'])
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
