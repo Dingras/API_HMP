@@ -6,6 +6,10 @@ class Brand(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+    
+    class Meta:
+        verbose_name_plural = "Marcas"
+        verbose_name = "Marca"
 
 class Category(models.Model):
     name = models.CharField(max_length=255, unique=True)
@@ -13,12 +17,20 @@ class Category(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+    
+    class Meta:
+        verbose_name_plural = "Categorias"
+        verbose_name = "Categoria"
 
 class Tag(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
     def __str__(self):
         return f'{self.name}'
+    
+    class Meta:
+        verbose_name_plural = "Etiquetas"
+        verbose_name = "Etiqueta"
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
@@ -35,4 +47,8 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.code} - {self.name}'
+    
+    class Meta:
+        verbose_name_plural = "Productos"
+        verbose_name = "Producto"
 
